@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow | To-Do List</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <header class="header">
+            <div class="logo">TaskFlow<span>.</span></div>
+            <p>Stay focused. Get things done.</p>
+        </header>
+
+        <main class="todo-card">
+
+            <div class="welcome-section">
+                <h1>My Tasks</h1>
+                <p>Organize your day, one task at a time.</p>
+            </div>
+
+            <div class="task-stats">
+                <div class="stat-box">
+                    <h2 id="totalTasks">0</h2>
+                    <p>Total Tasks</p>
+                </div>
+
+                <div class="stat-box">
+                    <h2 id="completedTasks">0</h2>
+                    <p>Completed</p>
+                </div>
+
+                <div class="stat-box">
+                    <h2 id="pendingTasks">0</h2>
+                    <p>Pending</p>
+                </div>
+            </div>
+
+            <form id="taskForm" class="task-form">
+                
+<form id="taskForm" class="task-form">
+
+    <input
+        type="text"
+        id="taskInput"
+        placeholder="What needs to be done?"
+        autocomplete="off"
+        required
+    >
+
+    <input
+        type="date"
+        id="taskDate"
+        class="task-date"
+        title="Select due date"
+    >
+
+    <input
+        type="time"
+        id="taskTime"
+        class="task-time"
+        title="Select due time"
+    >
+
+    <button type="submit" id="addTaskBtn">
+        + Add Task
+    </button>
+
+</form>
+
+                
+            
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    All
+                </button>
+
+                <button class="filter-btn" data-filter="pending">
+                    Pending
+                </button>
+
+                <button class="filter-btn" data-filter="completed">
+                    Completed
+                </button>
+            </div>
+
+            <ul id="taskList" class="task-list">
+                <!-- Tasks will appear here -->
+            </ul>
+
+            <div id="emptyMessage" class="empty-message">
+                <div class="empty-icon">✓</div>
+                <h3>No tasks yet!</h3>
+                <p>Add your first task and start being productive.</p>
+            </div>
+
+            <footer class="footer">
+                <p>Made with care • TaskFlow</p>
+                <p>Powered by LocalStorage</p>
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
